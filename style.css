@@ -1,0 +1,640 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --main-color-orange: rgba(247, 126, 83, 1);
+}
+html {
+    font-size: 10px;
+}
+button {
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+h1 {
+    font-weight: 700;
+}
+body {
+    font-family: "Inter",Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    height: 100vh;
+    margin: 2rem;
+}
+header,#logo-partner,#about,#courses #header,
+#courses #cards-container .card #card-icon,
+#testimonial #testimonial-container,
+#testimonial #titles,#pricing #titles,#lectures,footer #info-container{
+    display: flex;
+    justify-content: space-between;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#sidebar-active,#open-sidebar,#close-sidebar {
+    display: none;
+}
+.links-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+.links-container .links {
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+}
+.links-container .links a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #333;
+    font-size: 2rem;
+    font-family: "Inter";
+}
+nav button {
+    border: none;
+    outline: none;
+    border-radius: 1.2rem;
+    padding: 1.5rem 4rem;
+    font-size: 1.6rem;
+    color: rgba(35, 120, 255, 1);
+    background-color: rgba(232, 241, 255, 1);
+}
+
+header #text-container ,header #img-container,
+#about #text-container, #about #img-container{
+    flex: 1;
+}
+header #text-container,
+#lectures #text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+}
+header #text-container h1,
+#lectures #text-container h1,#logo-partner #info h1 {
+    font-size: 5rem;
+}
+header #text-container p,
+#lectures #text-container p {
+    font-family: "Roboto";
+    font-size: 2rem;
+    color: rgba(96, 97, 118, 1);
+}
+header #text-container button,
+#lectures #text-container button {
+    border-radius: 16px;
+    padding: 2rem 6rem;
+    background-color: var(--main-color-orange);
+    color: white;
+    font-size: 1.8rem;
+    align-self: flex-start;
+}
+header #text-container p a {
+    color: blue;
+}
+header #img-container {
+    display: flex;
+    justify-content: flex-end;
+} 
+header #img-container img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+#logo-partner {
+    align-items: center;
+}
+#logo-partner #info{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+#logo-partner #info p {
+    font-size: 2rem;
+    color: rgba(96, 97, 118, 1);
+}
+#logo-partner #uni-partner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+#logo-partner #uni-partner img {
+    object-fit: contain;
+    width: 15rem;
+    height: 6rem;
+}
+#about #text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    justify-content: center;
+}
+#about #text-container h1,#courses #header h1 {
+    font-size: 4rem;
+    color: rgba(16, 17, 48, 1);
+}
+#about #text-container #grp-1,#about #text-container #grp-2 {
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+#about #text-container div span {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    flex: 1;
+}
+#about #text-container div span h4{
+    font-size: 2rem;
+} 
+#about #text-container div span p {
+    color: rgba(96, 97, 118, 1);
+    font-size: 1.8rem;
+}
+#about #text-container div span img {
+    background-color: rgba(210, 241, 225, 1);
+    padding: 1rem;
+    border-radius: 1.6rem;
+    width: 4rem;
+    height: 4rem;
+}
+#courses {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+#courses #header {
+    align-items: center;
+}
+#courses #header button,#courses #cards-container button  {
+    padding: 2rem 4rem;
+    border-radius: 8px;
+    background-color: transparent;
+    border: 1px solid rgba(32, 118, 255, 1);
+    color: rgba(32, 118, 255, 1);
+    font-size: 1.8rem;
+}
+#courses #cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+#courses #cards-container .card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+#courses #cards-container .card .logo{
+    border-radius: 1rem;
+    height: 15rem;
+}
+#courses #cards-container .card h1 {
+    text-align: center;
+}
+#courses #cards-container .card #card-icon #user-icon,
+#courses #cards-container .card #card-icon #time-icon {
+    display: flex;
+    gap: 1rem;
+    color: rgba(96, 97, 118, 1);
+    font-size: 1.5rem;
+}
+#courses #cards-container .card #card-icon img {
+    max-width: 2rem;
+    max-height: 2rem;
+}
+#courses #cards-container .card button {
+    padding: 1rem 4rem;
+}
+#courses #cards-container .card:nth-child(2) button {
+    background-color: rgba(32, 118, 255, 1);
+    color: white;
+}
+#lectures {
+    align-items: center;
+    gap: 10rem;
+}
+#lectures #lectures-container {
+    height: 50rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(246, 245, 250, 1);
+    border-radius: 1.8rem;
+}
+#lectures #lectures-container #img-container {
+    height: 40rem;
+    width: 60rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+}
+#lectures #lectures-container #img-container .special {
+    width: 53rem;
+    height: 36rem;
+    margin-left: -6rem;
+    border-radius: 1.8rem;
+    z-index: 1;
+}
+#lectures #lectures-container #img-container .play {
+    position: absolute;
+    top: 48%;
+    left: 35%;
+    z-index: 2;
+    transform: translate(-50%,-50%);
+}
+#lectures #lectures-container #img-container #lectures-live {
+    display: flex;
+    gap: 3rem;
+}
+#lectures #lectures-container #img-container #lectures-live span {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: white;
+    border-radius: 0.8rem;
+    box-shadow: 0px 20px 30px 0px rgb(206, 204, 204);
+}
+#lectures #lectures-container #img-container #lectures-live span img {
+    width: 8rem;
+    height: 4.5rem;
+    border-radius: 0.8rem;
+}
+#lectures #lectures-container #img-container #lectures-live span p {
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+#testimonial,#pricing {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+#testimonial #titles h1,#pricing #titles h1,#pricing #cards-container .class #main h1  {
+    font-size: 4.4rem;
+}
+#testimonial #titles #back-forward {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+#testimonial #testimonial-container {
+    gap: 15rem;
+}
+#testimonial #testimonial-container .block {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+#testimonial #testimonial-container .block q {
+    font-weight: 500;
+    font-size: 2.2rem;
+}
+#testimonial #testimonial-container .block p {
+    color: rgba(96, 97, 118, 1);
+    font-size: 1.5rem;
+    font-family: "Roboto";
+}
+#testimonial #testimonial-container .block #tester {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+#testimonial #testimonial-container .block #tester img:nth-child(1) {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+}
+#testimonial #testimonial-container .block #tester #info h1{
+    font-weight: 600;
+    font-size: 2rem;
+}
+#pricing #titles button {
+    background-color: transparent;
+    border: 1px solid rgba(32, 118, 255, 1);
+    color: rgba(32, 118, 255, 1);
+    font-size: 1.8rem;
+    border-radius: 1.2rem;
+    padding: 2rem 4rem;
+}
+#pricing #cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    flex-wrap: wrap;
+}
+#pricing #cards-container .class{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    border-top-left-radius: 1.8rem;
+    border-top-right-radius: 1.8rem;
+    background-color: bisque;
+}
+#pricing #cards-container .class:first-of-type {
+    background-color: rgba(237, 243, 255, 1);
+}
+#pricing #cards-container .class:nth-of-type(2) {
+    background-color: rgba(254, 240, 195, 1);
+}
+#pricing #cards-container .class:last-of-type {
+    background-color: rgba(254, 230, 220, 1);
+}
+#pricing #cards-container .class div:first-child {
+    border-top-left-radius: 1.8rem;
+    border-top-right-radius: 1.8rem;
+    color: white;
+    font-weight: 600;
+    font-size: 2.6rem;
+    text-align: center;
+    padding: 2rem;
+}
+#pricing #cards-container .class:first-of-type div:first-child {
+    background-color: rgba(32, 118, 255, 1);
+}
+#pricing #cards-container .class:nth-of-type(2) div:first-child {
+    background-color: rgba(246, 192, 122, 1);
+}
+#pricing #cards-container .class:last-of-type div:first-child {
+    background-color: rgba(247, 126, 83, 1);
+}
+#pricing #cards-container .class #main {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    align-items: center;
+    padding: 0 2rem 1rem;
+}
+#pricing #cards-container .class #main h1 sup {
+    font-size: 2.2rem;
+}
+#pricing #cards-container .class #main ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+}
+#pricing #cards-container .class #main ul li {
+    position: relative;
+    font-size: 2rem;
+    color: rgba(96, 97, 118, 1);
+}
+#pricing #cards-container .class #main ul li::before {
+    content: "";
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background-color: rgba(32, 118, 255, 1);
+    position: absolute;
+    top: 50%;
+    left: -2rem;
+    transform: translateY(-50%);
+}
+#pricing #cards-container .class:nth-of-type(2) #main ul li::before {
+    background-color: rgba(246, 192, 122, 1);
+}
+#pricing #cards-container .class:nth-of-type(3) #main ul li::before {
+    background-color: rgba(247, 126, 83, 1);
+}
+#pricing #cards-container .class #main button {
+    font-size: 2rem;
+    font-weight: 600;
+    border-radius: 1.4rem;
+    border: 1px solid rgba(32, 118, 255, 1);
+    padding: 1.5rem 8rem;
+    background-color: transparent;
+    color: rgba(32, 118, 255, 1);
+}
+#pricing #cards-container .class:nth-of-type(2) #main button {
+    border-color: rgba(246, 192, 122, 1);
+    color: rgba(246, 192, 122, 1);
+}
+#pricing #cards-container .class:last-of-type #main button {
+    border: none;
+    background-color: rgba(247, 126, 83, 1);
+    color: white;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+footer #info-container #logo,footer #info-container #about-us,footer #info-container #support,footer #info-container #get-our-app{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+footer #info-container #logo img {
+    width: 15rem;
+    height: 4rem;
+}
+footer #info-container #logo p {
+    color: rgba(96, 97, 118, 1);
+    font-size: 1.8rem;
+}
+footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    list-style: none;
+}
+footer ul li {
+    color: rgba(96, 97, 118, 1);
+    font-size: 1.6rem;
+}
+footer #about-us h3, footer #support h3, footer #get-our-app{
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+footer #get-our-app .box {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    border: 1px solid rgba(96, 97, 118, 1);
+    border-radius: 0.7rem;
+    padding: 1rem;
+}
+footer #get-our-app .box p:first-of-type {
+    font-size: 1.2rem;
+}
+footer p {
+    font-size: 1.6rem;
+    color: rgba(96, 97, 118, 1);
+}
+@media(max-width:1200px){
+    body{
+        margin: 2rem;
+    }
+    #logo-partner,#lectures {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    footer #info-container {
+        flex-direction: column;
+        gap: 4rem;
+    }
+    footer ul {
+        flex-direction: row;
+    }
+    footer #info-container #logo,footer #info-container #about-us,footer #info-container #support,footer #info-container #get-our-app {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+}
+@media(max-width:970px){
+    header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    header #text-container{
+        text-align: center;
+    }
+    header #text-container button,
+    #lectures #text-container button {
+        align-self: center;
+    }
+    header #img-container {
+        align-items: center;
+    }
+    header #img-container{
+        justify-content: center;
+    }
+    #about #img-container {
+        display: none;
+    }
+    #about #text-container h1 {
+        text-align: center;
+    }
+    #lectures #text-container h1,#lectures #text-container p {
+        text-align: center;
+    }
+}
+@media(max-width:500px){
+    header #text-container h1{
+        font-size: 4rem;
+    }
+    header #img-container{
+        display: none;
+    }
+} 
+@media(max-width:670px){
+    #pricing #titles{
+        flex-direction: column;
+        gap: 3rem;
+        text-align: center;
+    }
+    #open-sidebar,#close-sidebar {
+        display: block;
+        margin-left: auto;
+        padding: 0 20px;
+    }
+    .links-container {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        
+    }
+    #sidebar-active:checked ~ .links.container {
+        right: 0;
+    }
+    
+}
+@media(max-width:565px) {
+    #courses #header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}
+@media(max-width:967px){
+    #lectures #lectures-container {
+        display: none;
+    }
+}
+@media(max-width:599px){
+    #testimonial #testimonial-container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    #testimonial #titles h1 {
+        text-align: center;
+    }
+    #testimonial #titles #back-forward {
+        display: none;
+    }
+}
+@media(max-width : 760px) {
+    
+    #open-sidebar {
+        display: block;
+        padding: 2rem ;
+    }
+    #close-sidebar {
+        display: block;
+        margin-left: auto;
+        padding: 2rem;
+    }
+    nav button {
+        position: fixed;
+        right: -100%;
+        z-index: 100;
+    }
+    .links-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        transition: 0.75s ease;
+    }
+    
+    #sidebar-active:checked ~ .links-container {
+        right: 0;
+    }
+    .links-container .links {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    #sidebar-active:checked ~ button {
+        right: 50%;
+        top: 80%;
+        transform: translateX(50%);
+        padding: 2rem ;
+        width: 80%;
+    }
+    nav .links-container .links a {
+        height: auto;
+        padding: 4rem 2rem;
+        text-align: center;
+    }
+}
