@@ -7,16 +7,22 @@
 }
 :root {
     --main-color-orange: rgba(247, 126, 83, 1);
+    --navbar-height: 60px;
 }
 html {
     font-size: 10px;
+    scroll-behavior:smooth;
+    scroll-padding-top: var(--navbar-height);
 }
 button {
     border: none;
     outline: none;
-    border-radius: 12px;
+    border-radius: 1.2rem;
     cursor: pointer;
     text-transform: capitalize;
+}
+img {
+    object-fit: contain;
 }
 h1 {
     font-weight: 700;
@@ -29,30 +35,29 @@ body {
     height: 100vh;
     margin: 2rem;
 }
-header,#logo-partner,#about,#courses #header,
+nav,.links-container,.links-container .links,header,section,#courses #header,
 #courses #cards-container .card #card-icon,
-#testimonial #testimonial-container,
-#testimonial #titles,#pricing #titles,#lectures,footer #info-container{
+#testimonial-container,#testimonial #titles,
+#pricing #titles,footer #info-container{
     display: flex;
     justify-content: space-between;
 }
 nav {
-    display: flex;
     align-items: center;
-    justify-content: space-between;
+    height: var(--navbar-height);
+    position: sticky;
+    top: 0;
+    z-index: 1500;
+    background-color: white;
 }
 #sidebar-active,#open-sidebar,#close-sidebar {
     display: none;
 }
 .links-container {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
     z-index: 10;
 }
 .links-container .links {
-    display: flex;
-    justify-content: space-between;
     gap: 5rem;
 }
 .links-container .links a {
@@ -60,12 +65,8 @@ nav {
     font-weight: 600;
     color: #333;
     font-size: 2rem;
-    font-family: "Inter";
 }
 nav button {
-    border: none;
-    outline: none;
-    border-radius: 1.2rem;
     padding: 1.5rem 4rem;
     font-size: 1.6rem;
     color: rgba(35, 120, 255, 1);
@@ -458,6 +459,7 @@ footer ul {
     flex-direction: column;
     gap: 2rem;
     list-style: none;
+    flex-wrap: wrap;
 }
 footer ul li {
     color: rgba(96, 97, 118, 1);
